@@ -17,7 +17,6 @@ const Title = styled.div`
   font-family: "Lato", sans-serif;
   margin-bottom: 1em;
   padding: 8px, 0;
-  border-bottom: 1px solid rgba(15, 15, 15, 0.3);
 `;
 
 const TextArea  = styled.textarea`
