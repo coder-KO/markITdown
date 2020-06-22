@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
+import EditorContext from "../EditorContext";
 
 const Continer = styled.div`
     width: 50%;
@@ -27,11 +28,14 @@ const ResultArea = styled.div`
 `;
 
 export default function Output(props) {
+
+    const { markdownText } = useContext(EditorContext);
+
     return (
         <Continer>
             <Title>Converted Text</Title>
             <ResultArea>
-                <ReactMarkdown source="# Hello" />
+                <ReactMarkdown source={markdownText} />
             </ResultArea>
         </Continer>
     )
