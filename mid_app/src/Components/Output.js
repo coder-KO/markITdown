@@ -2,10 +2,11 @@ import React, { useContext } from 'react'
 import styled from "styled-components";
 import ReactMarkdown from "react-markdown";
 import EditorContext from "../EditorContext";
+import { Card } from 'react-rainbow-components';
 
 const Continer = styled.div`
     width: 50%;
-    height: 100%;
+    height: 80vh;
     padding: 13px;
     border-right: 1.5px solid rgba(15, 15, 15, 0.4);
     font-family: 'Lato', sans-serif;
@@ -34,9 +35,11 @@ export default function Output(props) {
     return (
         <Continer>
             <Title>Converted Text</Title>
-            <ResultArea>
-                <ReactMarkdown source={markdownText} />
-            </ResultArea>
+            <Card style={{height: '65vh', padding: '4%'}}>
+                <ResultArea>
+                    <ReactMarkdown source={markdownText} />
+                </ResultArea>
+            </Card>
         </Continer>
     )
 }

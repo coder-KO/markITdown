@@ -1,10 +1,11 @@
 import React, { useContext } from 'react';
 import styled from "styled-components";
 import EditorContext from '../EditorContext';
+import { Card } from 'react-rainbow-components';
 
 const Continer = styled.div`
     width: 50%;
-    height: 100%;
+    height: 80vh;
     padding: 13px;
     border-right: 1.5px solid rgba(15, 15, 15, 0.4);
     font-family: 'Lato', sans-serif;
@@ -40,7 +41,9 @@ export default function Input(props) {
     return (
         <Continer>
             <Title>Markdown Text</Title>
-            <TextArea onChange={onInputChange} />
+            <Card style={{height: '65vh', padding: '4%'}}>
+                <TextArea onChange={onInputChange} />
+            </Card>
         </Continer>
     )
 }
