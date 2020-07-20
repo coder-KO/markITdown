@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import styled from "styled-components";
+import EmojiPicker from './EmojiPicker'
 import EditorContext from '../EditorContext';
 import { Card } from 'react-rainbow-components';
 
@@ -40,8 +41,10 @@ export default function Input(props) {
     return (
         <Continer>
             <Title>Markdown Text</Title>
+            <EmojiPicker />
             <Card style={{height: '65vh', padding: '4%'}}>
-                <TextArea onChange={onInputChange} />
+                <TextArea onChange={onInputChange}>     
+                </TextArea>
             </Card>
         </Continer>
     )
